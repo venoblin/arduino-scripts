@@ -2,6 +2,12 @@
 #define GREEN 8
 #define BLUE 6
 
+void rgbPins(int r, int g, int b) {
+  pinMode(r, OUTPUT);
+  pinMode(g, OUTPUT);
+  pinMode(b, OUTPUT);
+}
+
 void rgbWrite(int r, int g, int b) {
   digitalWrite(RED, r);
   digitalWrite(GREEN, g);
@@ -9,9 +15,7 @@ void rgbWrite(int r, int g, int b) {
 }
 
 void setup() {
-  pinMode(RED, OUTPUT);
-  pinMode(GREEN, OUTPUT);
-  pinMode(BLUE, OUTPUT);
+  rgbPins(RED, GREEN, BLUE);
   rgbWrite(0, 0, 255);
 }
 
