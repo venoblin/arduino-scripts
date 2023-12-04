@@ -15,5 +15,5 @@ void loop () {
   Serial.print(" cm");
   
   Serial.println("");
-  delay(500);
+  delay(250);
 }
